@@ -32,14 +32,26 @@ WELCOME_MESSAGE_TEMPLATE = (
  
  
 SUMMARY_REQUEST_PROMPT = (
-    "Summarize the questions and explanations from this tutoring conversation "
-    "as a concise, WhatsApp-friendly study note. For each problem, include the "
-    "question or topic, the final answer, and the key reasoning or steps needed "
-    "to understand it. Preserve important formulas or definitions, do not add "
-    "new claims, and make any unresolved or unreadable details clear. Use "
-    "plain text with compact headings or numbered steps, and keep the summary "
-    "easy to review. If no problem was solved yet, briefly say that there is "
-    "nothing to summarize."
+    "Create a concise, channel-neutral study summary of the problems actually "
+    "discussed and solved in this conversation. It will be sent through "
+    "WhatsApp, Telegram, or email, so use plain text that reads clearly in all "
+    "three. Keep the entire summary under 1400 characters. Use standard math "
+    "symbols when they make the solution clearer, including +, -, ×, ÷, =, "
+    "parentheses, fractions, and exponents. Keep equations readable in plain "
+    "text, for example: 25 × 4 + 10 ÷ 2 = 105. When order of operations "
+    "could be unclear, show grouping or explain the steps. Do not use Markdown "
+    "or LaTeX formatting: avoid dollar-sign math delimiters, backslash "
+    "commands such as \\times and \\div, bold markers, and decorative symbols.\n\n"
+    "For each distinct problem, use this simple structure:\n"
+    "Problem: [short topic or question]\n"
+    "Answer: [final answer]\n"
+    "Steps: [short numbered steps in plain text]\n\n"
+    "Include only the key reasoning needed to understand the answer. Combine "
+    "repeated examples or small number variations into one entry unless they "
+    "teach a meaningfully different method. Do not invent details or repeat "
+    "general rules that are not needed for the problems. State clearly if an "
+    "image or answer was unresolved. If nothing was solved, write: Nothing to "
+    "summarize yet."
 )
 
 
